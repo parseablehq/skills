@@ -41,7 +41,8 @@ Use environment variables for these values:
 
 ```bash
 PARSEABLE_ENDPOINT=https://your-parseable-instance.example.com
-PARSEABLE_STREAM=genai-traces
+PARSEABLE_TRACES_STREAM=genai-traces
+PARSEABLE_LOGS_STREAM=genai-logs
 PARSEABLE_USERNAME=your-username
 PARSEABLE_PASSWORD=your-password
 PARSEABLE_TENANT_ID=
@@ -61,7 +62,7 @@ Choose dataset names that match the telemetry signal and lifecycle:
 | `genai-logs` | Message events, application logs, structured audit events |
 | `genai-metrics` | Token counts, latency histograms, rate limits, cost aggregates |
 
-For smaller setups, a single `genai-traces` dataset is acceptable if traces and logs are exported together. For production, separate datasets can simplify retention, access control, and query performance.
+For agent observability, keep traces and logs in separate datasets. Spans go to `genai-traces`; log records with message, tool, and reasoning content go to `genai-logs`.
 
 ## Query And UI Guidance
 
