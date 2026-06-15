@@ -1,0 +1,7 @@
+interface:
+  display_name: "Parseable Instrumentation"
+  short_description: "Add observability to LLM agents."
+  default_prompt: "Use $parseable-instrument to add Parseable tracing to this AI agent."
+
+policy:
+  allow_implicit_invocation: true
